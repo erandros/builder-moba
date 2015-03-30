@@ -11,7 +11,7 @@ module.exports = function (grunt) {
             options: {
                 compile: true,                 // perform compilation. [true (default) | false]
                 comments: false,               // same as !removeComments. [true | false (default)]
-                target: 'es5',                 // target javascript language. [es3 (default) | es5]
+                target: 'es6',                 // target javascript language. [es3 (default) | es5]
                 module: 'commonjs',                 // target javascript module style. [amd (default) | commonjs]
                 sourceRoot: '',                // where to locate TypeScript files. [(default) '' == source ts location]
                 mapRoot: '',                   // where to locate .map.js files. [(default) '' == generated js location.]
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                 }
             },
             bro: {
-                files: ['public/**/*.js'],
+                files: ['public/game/**/*.js'],
                 tasks: ['browserify', 'notify:bro_ok'],
                 options: {
                     interrupt: true,
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         },
         browserify: {
             app: {
-                src: ['public/**/*.js'],
+                src: ['public/game/**/*.js'],
                 dest: 'public/game.js'
             }   
         },

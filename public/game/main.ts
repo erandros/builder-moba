@@ -2,8 +2,10 @@
 
 var mesh, renderer, scene, camera, controls;
 
-init();
-render();
+document.addEventListener("DOMContentLoaded", event => { 
+    init();
+    render();
+});
 
 function init() {
 
@@ -77,13 +79,13 @@ function init() {
     scene.add( grid );
 
     // geometry
-    var geometry = new THREE.BoxGeometry( 10, 10, 10 );
+    var boxGeometry = new THREE.BoxGeometry( 10, 10, 10 );
 
     // material
     var meshNormalMaterial = new THREE.MeshNormalMaterial();
 
     // mesh
-    mesh = new THREE.Mesh( geometry, meshNormalMaterial );
+    mesh = new THREE.Mesh( boxGeometry, meshNormalMaterial );
     scene.add( mesh );
 
 }
