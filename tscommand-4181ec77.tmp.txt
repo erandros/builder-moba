@@ -1,0 +1,1 @@
+"d:\heroku\builder-moba\public\reference.ts" --sourcemap --removeComments --target ES5 --module commonjs --out public/out.js
